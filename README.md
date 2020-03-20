@@ -29,5 +29,5 @@ Run the following commands:
 Then simply run the Notifier.py file by running the below command in Command Prompt
 
 ```
-py Notifier.py</h6>
+py Notifier.py
 ```
