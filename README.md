@@ -5,7 +5,7 @@ This automated tracker tracks the spread of Covid-19 in a real time basis by scr
 
 It scrapes the below table periodically from website of Ministry of Health and Family Welfare(https://www.mohfw.gov.in/).
 
-<img src="Table.jpeg">
+<img src="Table.JPG">
 
 If any changes has happened to the table compared to the state of last time checked, it creates a message describing the change and sends the message to a given user/channel in Slack.
 
