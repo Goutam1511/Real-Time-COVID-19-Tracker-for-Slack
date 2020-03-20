@@ -11,16 +11,19 @@ If any changes has happened to the table compared to the state of last time chec
 
 # Pre-requisites
 
-Python 2.7.x
+<h4>Python 2.7.x </h4>
 
-Latest Pip with all envirionment variables set
+<h4>Latest <b>pip</b> with all envirionment variables set</h4>
+
+<h4> Slack API Token for SlackBot </h4>
 
 # How to Set up the tracker
 
 Run the following commands:
 
-<h6>pip install beautifulsoup4</h6>
-<h6>pip install requests</h6>
+```pip install beautifulsoup4
+   pip install requests
+```
 
 Then simply run the Notifier.py file by running the below command in Command Prompt
 
