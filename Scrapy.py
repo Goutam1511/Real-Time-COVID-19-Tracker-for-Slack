@@ -17,13 +17,14 @@ class currentSituation:
 
                 for i in tr_list[:-1]:
                     td_list = i.find_all('td')
-                    state, indian, foreign, cured, died = td_list[1:]
-                    state   = str(state.text)
-                    indian  = int(indian.text)
-                    foreign = int(foreign.text)
-                    cured   = int(cured.text)
-                    died    = int(died.text)
-                    self.data_set[state] = [indian, foreign, cured, died]
+                    if len(td_list) == 6:
+                        state, indian, foreign, cured, died = td_list[1:]
+                        state   = str(state.text)
+                        indian  = int(indian.text)
+                        foreign = int(foreign.text)
+                        cured   = int(cured.text)
+                        died    = int(died.text)
+                        self.data_set[state] = [indian, foreign, cured, died]
             else:
                 self.response_rcvd = False
         except:
