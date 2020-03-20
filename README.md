@@ -21,10 +21,13 @@ If any changes has happened to the table compared to the state of last time chec
 
 Run the following commands:
 
-```pip install beautifulsoup4
-   pip install requests
+```
+  pip install beautifulsoup4
+  pip install requests
 ```
 
 Then simply run the Notifier.py file by running the below command in Command Prompt
 
-<h6>py Notifier.py</h6>
+```
+py Notifier.py</h6>
+```
