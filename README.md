@@ -12,6 +12,7 @@ If any changes has happened to the table compared to the state of last time chec
 # Pre-requisites
 
 Python 2.7.x
+
 Latest Pip with all envirionment variables set
 
 # How to Set up the tracker
