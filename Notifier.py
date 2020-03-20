@@ -12,7 +12,7 @@ def hourlynotifier():
     while True:
         now = datetime.now()
         change = Changetracker()
-        if change.notification != '':
+        if change.notification != '' and not None:
             print change.notification
             slack.chat.post_message("@gotubose",change.notification)
         else:
