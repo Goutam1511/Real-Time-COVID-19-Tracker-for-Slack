@@ -24,6 +24,7 @@ Run the following commands:
 ```
   pip install beautifulsoup4
   pip install requests
+  pip install slacker
 ```
 
 Then simply run the Notifier.py file by running the below command in Command Prompt
