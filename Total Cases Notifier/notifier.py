@@ -4,7 +4,7 @@ from slacker import Slacker
 import time
 from datetime import datetime
 
-slack = Slacker('xoxb-1003798978883-1017500189990-C6pdaXQ4XTng6hgPsgJ8PPL4')
+slack = Slacker('YOUR_SLACK_API_TOKEN_HERE')
 
 def hourlynotifier():
     prev_indian = 0
@@ -21,12 +21,12 @@ def hourlynotifier():
             now = datetime.now().strftime("%m/%d/%Y, %H:%M:%S")
             if current_status.exception_occrd:
                 print "Encountered Exception"
-                slack.chat.post_message("@gotubose","Encountered Exception")
+                slack.chat.post_message("@user","Encountered Exception")
                 break;
             if current_stat is not None and len(current_stat)>0:
                 if current_stat[0] > prev_indian or current_stat[1] > prev_cured or current_stat[2] > prev_died:
                     message = 'NEW STATISTICS :-> Affected : ' + str(current_stat[0]) + ' Cured : ' + str(current_stat[1]) + ' Died : ' + str(current_stat[2])
-                    slack.chat.post_message("@gotubose", message)
+                    slack.chat.post_message("@user", message)
                     db.insert_into_db((now, current_stat[0], current_stat[1], current_stat[2]))
                     prev_indian, prev_cured, prev_died = current_stat
                     if db.exception:
@@ -37,7 +37,7 @@ def hourlynotifier():
 
             time.sleep(12)
         except:
-            slack.chat.post_message("@gotubose", message)
+            slack.chat.post_message("@user", message)
             break;
 
 
