@@ -12,7 +12,7 @@ class currentSituation:
             response   = get(url)
             if response.ok:
                 html_soup  = BeautifulSoup(response.text, 'html.parser')
-                table_body = html_soup.find('tbody')
+                table_body = html_soup.find_all('tbody')[1]
                 tr_list    = table_body.find_all('tr')
 
                 for i in tr_list[:-1]:
